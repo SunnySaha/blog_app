@@ -1,0 +1,20 @@
+{% extends "easyshare/base.html" %}
+{% block title %}Add Post{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+
+        <fieldset class="form-group">
+            <legend class="border-bottom-md-4" style="color:red">Create Post</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-success" type="submit"> Post Now</button>
+        </div>
+
+    </form>
+</div>
+{% endblock content %}

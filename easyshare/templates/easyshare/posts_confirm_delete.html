@@ -1,0 +1,19 @@
+{% extends "easyshare/base.html" %}
+
+{% block content %}
+<div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+
+        <fieldset class="form-group">
+            <legend class="border-bottom-md-4">Delete Post</legend>
+            <h3>Are You Sure to delete the post "{{ object.title }}"</h3>
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-danger" type="submit"> Yes, Delete</button>
+            <a href="{% url 'post_details' object.id %}" class="btn btn-outline-info" type="submit"> No, I Won't</a>
+        </div>
+
+    </form>
+</div>
+{% endblock content %}

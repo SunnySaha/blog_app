@@ -1,0 +1,17 @@
+{% extends "easyshare/base.html" %}
+{% block title %}Logout{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+    <div class="border-top pt-3">
+
+        <h2 style="color:Blue">You Are Successfully Logout</h2>
+        <a class="ml-2" href="{% url 'login' %}">Login Again</a>
+
+    </div>
+
+
+{% endblock content %}
